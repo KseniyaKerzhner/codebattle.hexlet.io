@@ -1,0 +1,269 @@
+---
+- summary: |
+    Попробовать простую игру без регистрации
+  requirement: |
+    При нажатии кнопки "TRY SIMPLE" открывается интерфейс с задачей против бота
+  prerequisites: |
+    no prerequisites
+  test-data: |
+    no test-data
+  steps:
+    - Нажимем кнопку "TRY SIMPLE"
+  expected-result: |
+    Открылась задача против бота
+
+- summary: |
+    Проверка регистации через GitHub
+  requirement: |
+    При вводе правильного логина и пароля аккаунта GitHub происходит вход в систему
+  prerequisites: |
+    Пользователь должен иметь аккаунт на GitHub
+  test-data: |
+    no test-data
+  steps:
+    - нажать кнопку "Sign up"
+    - нажать кнопку "Sign in with Github"
+    - Вводим логин
+    - Вводим пароль
+    - Нажать кнопку "Sign in"
+  expected-result: |
+    Открылась страница лобби
+
+- summary: |
+    Проверка авторизации через GitHub
+  requirement: |
+    При вводе правильного логина и пароля аккаунта GitHub происходит вход в систему
+  prerequisites: |
+    Пользователь должен иметь аккаунт на GitHub
+  test-data: |
+    no test-data
+  steps:
+    - нажать кнопку "Sign in"
+    - нажать кнопку "Sign in with Github"
+    - Вводим логин
+    - Вводим пароль
+    - Нажать кнопку "Sign in"
+  expected-result: |
+    Открылась страница лобби
+
+- summary: |
+    Проверка регистации через Discord
+  requirement: |
+    При вводе правильного логина и пароля аккаунта Discord происходит вход в систему
+  prerequisites: |
+    Пользователь должен иметь аккаунт на Discord
+  test-data: |
+    no test-data
+  steps:
+    - нажать кнопку "Sign up"
+    - нажать кнопку "Sign in with Discord"
+    - Вводим логин
+    - Вводим пароль
+    - Нажать кнопку "Authorize"
+  expected-result: |
+    Открылась страница лобби
+
+- summary: |
+    Проверка авторизации через Discord
+  requirement: |
+    При вводе правильного логина и пароля аккаунта Discord происходит вход в систему
+  prerequisites: |
+    Пользователь должен иметь аккаунт на GitHub
+  test-data: |
+    no test-data
+  steps:
+    - нажать кнопку "Sign in"
+    - нажать кнопку "Sign in with Discord"
+    - Вводим логин
+    - Вводим пароль
+    - Нажать кнопку "Authorize"
+  expected-result: |
+    Открылась страница лобби
+
+- summary: |
+    Проверка регистации с помощью корректных Nickname и email
+  requirement: |
+    При корректном заполнении формы регистрации происходит вход в систему
+  prerequisites: |
+    no prerequisites
+  test-data: |
+    no test-data
+  steps:
+    - нажать кнопку "Sign up"
+    - нажать кнопку "Sign in with Discord"
+    - Вводим логин
+    - Вводим пароль
+    - Нажать кнопку "Authorize"
+  expected-result: |
+    Открылась страница лобби
+
+- summary: |
+    Проверка авторизации с помощью правильных Nickname и email
+  requirement: |
+    При вводе правильного email и пароля происходит вход в систему
+  prerequisites: |
+    Пользователь ранее должен зарегестироваться
+  test-data: |
+    no test-data
+  steps:
+    - нажать кнопку "Sign in"
+    - Вводим email
+    - Вводим пароль
+    - Нажать кнопку "Submit"
+  expected-result: |
+    Открылась страница лобби
+
+- summary: |
+    Проверка создания простой игры против бота
+  requirement: |
+    При нажатии кнопки "Create a game" и выборе параметров должна открыться игра
+  prerequisites: |
+    - пользователь должен быть авторизован
+  test-data: |
+    no test-data
+  steps:
+    - Нажать кнопку "Create a game"
+    - В открывшемся окне выбрать желаемый уровень сложности
+    - Тип игры выбрать "With a bot"
+    - Время установить любое
+    - задачу выбрать любую
+    - Нажимаем кнопку «Create battle»
+  expected-result: |
+    Открылась задача против бота
+
+- summary: |
+    Проверить возможнось слежения за ходом игры других игроков
+  requirement: |
+    При нажалии в лобби кнопки "Show" напротив существующей игры откроется слежение на ходом игры
+  prerequisites: |
+    - пользователь должен быть авторизован
+  test-data: |
+    no test-data
+  steps:
+    - Нажать кнопку "Show"
+  expected-result: |
+    Открылся интерфейс слежения за ходом игры
+
+- summary: |
+    Проверка возможности отправки сообщений в чат
+  requirement: |
+    После набора сообщения и нажатия кнопки "Send" данное сообщение появляется в чате
+  prerequisites: |
+    - пользователь должен быть авторизован
+  test-data: |
+    no test-data
+  steps:
+    - Набрать сообщение "Привет"
+    - Нажать кнопку "Send"
+  expected-result: |
+    Сообщение появилось в чате
+
+- summary: |
+    Проверка возможности просмотра завершенной игры
+  requirement: |
+
+  prerequisites: |
+    -
+  test-data: |
+    no test-data
+  steps:
+    -
+  expected-result: |
+
+- summary: |
+    Проверка возможности просмотра рейтинга за неделю
+  requirement: |
+
+  prerequisites: |
+    -
+  test-data: |
+    no test-data
+  steps:
+    -
+  expected-result: |
+
+- summary: |
+    Проверка возможности просмотра рейтинга за месяц
+  requirement: |
+
+  prerequisites: |
+    -
+  test-data: |
+    no test-data
+  steps:
+    -
+  expected-result: |
+
+- summary: |
+    Проверка возможности просмотра рейтинга за все время
+  requirement: |
+
+  prerequisites: |
+    -
+  test-data: |
+    no test-data
+  steps:
+    -
+  expected-result: |
+
+- summary: |
+    Проверка возможности просмотра завершенной игры
+  requirement: |
+
+  prerequisites: |
+    -
+  test-data: |
+    no test-data
+  steps:
+    -
+  expected-result: |
+
+- summary: |
+    Проверка возможности создания нового турнира
+  requirement: |
+
+  prerequisites: |
+    -
+  test-data: |
+    no test-data
+  steps:
+    -
+  expected-result: |
+
+- summary: |
+    Проверка возможности просмотра завершенной игры
+  requirement: |
+
+  prerequisites: |
+    -
+  test-data: |
+    no test-data
+  steps:
+    -
+  expected-result: |
+
+# негативные тесты
+
+- summary: |
+
+  requirement: |
+
+  prerequisites: |
+    -
+  test-data: |
+    no test-data
+  steps:
+    -
+  expected-result: |
+
+- summary: |
+
+  requirement: |
+
+  prerequisites: |
+    -
+  test-data: |
+    no test-data
+  steps:
+    -
+  expected-result: |
