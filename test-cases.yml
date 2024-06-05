@@ -90,10 +90,11 @@
     no test-data
   steps:
     - нажать кнопку "Sign up"
-    - нажать кнопку "Sign in with Discord"
-    - Вводим логин
-    - Вводим пароль
-    - Нажать кнопку "Authorize"
+    - вводим Nickname - lara373
+    - Вводим email - lara.medeiros373@flounderfantasy.com
+    - Вводим пароль - K_pdcHQ2yjK7VgF
+    - вводим пароль повторно
+    - Нажать кнопку "Submit"
   expected-result: |
     Открылась страница лобби
 
@@ -107,8 +108,8 @@
     no test-data
   steps:
     - нажать кнопку "Sign in"
-    - Вводим email
-    - Вводим пароль
+    - Вводим email - lara.medeiros373@flounderfantasy.com
+    - Вводим пароль - K_pdcHQ2yjK7VgF
     - Нажать кнопку "Submit"
   expected-result: |
     Открылась страница лобби
@@ -159,79 +160,103 @@
     Сообщение появилось в чате
 
 - summary: |
-    Проверка возможности просмотра завершенной игры
+    Проверка возможности просмотра списка истории завершенных игр
   requirement: |
-
+    При нажатии меню "History" открывается список завершенных игр
   prerequisites: |
-    -
+    - пользователь должен быть авторизован
   test-data: |
     no test-data
   steps:
-    -
+    - нажать кнопку "History"
   expected-result: |
+    Открылся список завершенных игр
 
 - summary: |
-    Проверка возможности просмотра рейтинга за неделю
+    Проверка возможности просмотра результатов завершенной игры
   requirement: |
-
+    При нажатии кнопки "Show" открывается страница с результатами игры
   prerequisites: |
-    -
+    - пользователь должен быть авторизован
+    - открыть раздел "History"
   test-data: |
     no test-data
   steps:
-    -
+    - открыть раздел "History"
+    - нажать кнопку "Show" напротив любой игры
   expected-result: |
+    открыласть страница с результатами игры
 
 - summary: |
-    Проверка возможности просмотра рейтинга за месяц
+    Проверка возможности просмотра таблицы лидеров за неделю
   requirement: |
-
+    При авторизации в LEADERBOARD по умолчанию открыта вкладка "Week"
   prerequisites: |
-    -
+    - пользователь должен быть авторизован
   test-data: |
     no test-data
   steps:
-    -
+    - no steps
   expected-result: |
+    В LEADERBOARD открыта вкладка "Week"
 
 - summary: |
-    Проверка возможности просмотра рейтинга за все время
+    Проверка возможности просмотра таблицы лидеров за месяц
   requirement: |
-
+    При выборе вкладки "Month" в LEADERBOARD открывается таблица лидеров за месяц
   prerequisites: |
-    -
+    - пользователь должен быть авторизован
   test-data: |
     no test-data
   steps:
-    -
+    - выбрать вкладку "Month"
   expected-result: |
+    Открылась таблица лидеров за месяц
 
 - summary: |
-    Проверка возможности просмотра завершенной игры
+    Проверка возможности просмотра таблицы лидеров за все время
   requirement: |
-
+    При выборе вкладки "All" в LEADERBOARD открывается таблица лидеров за всё время
   prerequisites: |
-    -
+    - пользователь должен быть авторизован
   test-data: |
     no test-data
   steps:
-    -
+    - выбрать вкладку 'All'
   expected-result: |
+    Открылась таблица лидеров за всё время
+
+- summary: |
+    Проверка возможности просмотра полной таблицы лидеров
+  requirement: |
+    При нажатии кнопки "Top list" открывается полная таблица лидеров
+  prerequisites: |
+    - пользователь должен быть авторизован
+  test-data: |
+    no test-data
+  steps:
+    - нажать кнопку "Top list"
+  expected-result: |
+    Открылась полная таблица лидеров
 
 - summary: |
     Проверка возможности создания нового турнира
   requirement: |
-
+    При заполениии формы "Create a new tournament" и нажатии кнопки "Create" создается турнир
   prerequisites: |
-    -
+    - пользователь должен быть авторизован
   test-data: |
     no test-data
   steps:
-    -
+    - нажать на иконку пользователя
+    - во всплывающем меню выбрать пункт "Tournaments"
+    - в конце страницы заполнить форму "Create a new tournament"
+    - нажать кнопку "Create"
   expected-result: |
+    Создался новый турнир
 
 - summary: |
-    Проверка возможности просмотра завершенной игры
+
   requirement: |
 
   prerequisites: |
@@ -245,16 +270,24 @@
 # негативные тесты
 
 - summary: |
-
+    Дублирование учетной записи
   requirement: |
-
+    При регистрация с тем же адресом электронной почты, который уже используется другим пользователем должна появится ошибка
   prerequisites: |
-    -
+    учетная запись должна быть зарегестрированна
   test-data: |
-    no test-data
+    nickname - lara373
+    email - lara.medeiros373@flounderfantasy.com
+    password - K_pdcHQ2yjK7VgF
   steps:
-    -
+    - нажать кнопку "Sign up"
+    - вводим Nickname - lara373
+    - Вводим email - lara.medeiros373@flounderfantasy.com
+    - Вводим пароль - K_pdcHQ2yjK7VgF
+    - вводим пароль повторно
+    - Нажать кнопку "Submit"
   expected-result: |
+    Регистация не возможна
 
 - summary: |
 
